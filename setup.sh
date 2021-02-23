@@ -18,6 +18,20 @@ else
 	echo "Okay, no problem. :) Let's move on!"
 fi
 
+echo "Generating a SSH Key"
+ssh-keygen -t rsa -b 4096 -C $git_config_user_email
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+
+echo "Start the ssh-agent in the background"
+eval "$(ssh-agent -s)"
+
+echo "Automatically load SSH keys"
+echo "Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
+
 echo "Installing: Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
