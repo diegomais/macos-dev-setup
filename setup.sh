@@ -65,6 +65,9 @@ brew install --cask google-chrome
 echo "Installing: Insomnia - HTTP and GraphQL Client"
 brew install --cask insomnia
 
+echo "Installing: iTerm2 - Terminal emulator as alternative to Apple's Terminal app"
+brew install --cask iterm2
+
 echo "Installing: Docker"
 brew install --cask docker
 
