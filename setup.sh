@@ -56,6 +56,9 @@ brew install --cask discord
 echo "Installing: Figma"
 brew install --cask figma
 
+echo "Installing: Facebook Flipper - Desktop debugging platform for mobile developers"
+brew install --cask flipper
+
 echo "Installing: Docker"
 brew install --cask docker
 
