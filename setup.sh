@@ -47,6 +47,9 @@ mix archive.install hex phx_new 1.5.7
 echo "Installing: DBeaver Community Edition"
 brew install --cask dbeaver-community
 
+echo "Installing: DevDocs App"
+brew install --cask devdocs
+
 echo "Installing: Android Studio"
 brew install --cask android-studio
 
