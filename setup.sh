@@ -71,6 +71,9 @@ brew install --cask iterm2
 echo "Installing: Microsoft Edge - Web browser"
 brew install --cask microsoft-edge
 
+echo "Installing: MongoDB Compass - GUI for MongoDB"
+brew install --cask mongodb-compass
+
 echo "Installing: Docker"
 brew install --cask docker
 
