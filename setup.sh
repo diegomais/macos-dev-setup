@@ -44,6 +44,9 @@ brew install elixir
 echo "Installing: Phoenix"
 mix archive.install hex phx_new 1.5.7
 
+echo "Installing: DBeaver Community Edition"
+brew install --cask dbeaver-community
+
 echo "Installing: Android Studio"
 brew install --cask android-studio
 
