@@ -62,6 +62,9 @@ brew install --cask flipper
 echo "Installing: Google Chrome - Web browser"
 brew install --cask google-chrome
 
+echo "Installing: Insomnia - HTTP and GraphQL Client"
+brew install --cask insomnia
+
 echo "Installing: Docker"
 brew install --cask docker
 
