@@ -59,6 +59,9 @@ brew install --cask figma
 echo "Installing: Facebook Flipper - Desktop debugging platform for mobile developers"
 brew install --cask flipper
 
+echo "Installing: Google Chrome - Web browser"
+brew install --cask google-chrome
+
 echo "Installing: Docker"
 brew install --cask docker
 
