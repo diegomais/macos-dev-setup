@@ -53,6 +53,9 @@ brew install --cask devdocs
 echo "Installing: Discord"
 brew install --cask discord
 
+echo "Installing: Figma"
+brew install --cask figma
+
 echo "Installing: Docker"
 brew install --cask docker
 
