@@ -53,6 +53,9 @@ brew install --cask devdocs
 echo "Installing: Discord"
 brew install --cask discord
 
+echo "Installing: Docker"
+brew install --cask docker
+
 echo "Installing: Android Studio"
 brew install --cask android-studio
 
