@@ -35,6 +35,9 @@ echo "Host *
 echo "Installing: Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
+echo "Installing: nvm"
+/bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
+
 echo "Installing: Elixir"
 brew install elixir
 
