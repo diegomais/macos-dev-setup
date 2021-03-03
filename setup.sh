@@ -68,6 +68,9 @@ brew install --cask insomnia
 echo "Installing: iTerm2 - Terminal emulator as alternative to Apple's Terminal app"
 brew install --cask iterm2
 
+echo "Installing: Microsoft Edge - Web browser"
+brew install --cask microsoft-edge
+
 echo "Installing: Docker"
 brew install --cask docker
 
