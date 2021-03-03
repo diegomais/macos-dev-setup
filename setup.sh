@@ -44,5 +44,8 @@ brew install elixir
 echo "Installing: Phoenix"
 mix archive.install hex phx_new 1.5.7
 
+echo "Installing: Android Studio"
+brew install --cask android-studio
+
 echo "Installing: Desktop client for Amazon Music"
 brew install --cask amazon-music
