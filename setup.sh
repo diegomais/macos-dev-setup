@@ -80,6 +80,9 @@ brew install --cask mongodb-compass
 echo "Installing: Notion - App to write, plan, collaborate, and get organized"
 brew install --cask notion
 
+echo "Installing: Postman - Collaboration platform for API development"
+brew install --cask postman
+
 echo "Installing: Docker"
 brew install --cask docker
 
