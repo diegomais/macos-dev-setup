@@ -83,6 +83,9 @@ brew install --cask notion
 echo "Installing: Postman - Collaboration platform for API development"
 brew install --cask postman
 
+echo "Installing: React Native Debugger - App for debugging React Native apps"
+brew install --cask react-native-debugger
+
 echo "Installing: Docker"
 brew install --cask docker
 
