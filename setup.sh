@@ -89,6 +89,9 @@ brew install --cask react-native-debugger
 echo "Installing: Reactotron - App for inspecting React JS and React Native projects"
 brew install --cask reactotron
 
+echo "Installing: Skype - App for video chat, voice call and instant messaging"
+brew install --cask skype
+
 echo "Installing: Docker"
 brew install --cask docker
 
