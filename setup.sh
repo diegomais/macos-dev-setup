@@ -92,6 +92,9 @@ brew install --cask reactotron
 echo "Installing: Skype - App for video chat, voice call and instant messaging"
 brew install --cask skype
 
+echo "Installing: SourceTree - Graphical client for Git version control"
+brew install --cask sourcetree
+
 echo "Installing: Docker"
 brew install --cask docker
 
