@@ -86,6 +86,9 @@ brew install --cask postman
 echo "Installing: React Native Debugger - App for debugging React Native apps"
 brew install --cask react-native-debugger
 
+echo "Installing: Reactotron - App for inspecting React JS and React Native projects"
+brew install --cask reactotron
+
 echo "Installing: Docker"
 brew install --cask docker
 
