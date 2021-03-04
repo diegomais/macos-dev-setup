@@ -38,6 +38,9 @@ echo "Installing: Homebrew"
 echo "Installing: nvm"
 /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
 
+echo "Installing: Firebase CLI"
+npm install -g firebase-tools
+
 echo "Installing: Elixir"
 brew install elixir
 
