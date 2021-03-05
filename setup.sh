@@ -41,6 +41,9 @@ echo "Installing: nvm"
 echo "Installing: Firebase CLI"
 npm install -g firebase-tools
 
+echo "Installing: Nest CLI - Node.js Framework"
+npm install -g @nestjs/cli
+
 echo "Installing: Elixir"
 brew install elixir
 
