@@ -68,11 +68,11 @@ brew install --cask flipper
 echo "Installing: Google Chrome - Web browser"
 brew install --cask google-chrome
 
+echo "Installing: Hyper - Terminal built on web technologies"
+brew install --cask hyper
+
 echo "Installing: Insomnia - HTTP and GraphQL Client"
 brew install --cask insomnia
-
-echo "Installing: iTerm2 - Terminal emulator as alternative to Apple's Terminal app"
-brew install --cask iterm2
 
 echo "Installing: Microsoft Edge - Web browser"
 brew install --cask microsoft-edge
