@@ -104,6 +104,9 @@ brew install --cask telegram
 echo "Installing: Zeplin - Share, organize and collaborate on designs"
 brew install --cask zeplin
 
+echo "Installing: Zoom.us - Video communication and virtual meeting platform"
+brew install --cask zoom
+
 echo "Installing: Docker"
 brew install --cask docker
 
