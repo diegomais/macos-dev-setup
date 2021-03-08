@@ -98,6 +98,9 @@ brew install --cask skype
 echo "Installing: SourceTree - Graphical client for Git version control"
 brew install --cask sourcetree
 
+echo "Installing: Telegram - Messaging app with a focus on speed and security"
+brew install --cask telegram
+
 echo "Installing: Docker"
 brew install --cask docker
 
