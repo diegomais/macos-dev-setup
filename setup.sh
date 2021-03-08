@@ -106,3 +106,6 @@ brew install --cask android-studio
 
 echo "Installing: Desktop client for Amazon Music"
 brew install --cask amazon-music
+
+echo "Installing: Spotify - Music streaming service"
+brew install --cask spotify
