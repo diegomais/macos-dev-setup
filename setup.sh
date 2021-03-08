@@ -101,6 +101,9 @@ brew install --cask sourcetree
 echo "Installing: Telegram - Messaging app with a focus on speed and security"
 brew install --cask telegram
 
+echo "Installing: Zeplin - Share, organize and collaborate on designs"
+brew install --cask zeplin
+
 echo "Installing: Docker"
 brew install --cask docker
 
