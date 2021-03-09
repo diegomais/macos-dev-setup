@@ -74,6 +74,9 @@ brew install --cask google-chrome
 echo "Installing: Hyper - Terminal built on web technologies"
 brew install --cask hyper
 
+echo "Installing: Hyper-Dracula - Dark theme for Hyper"
+hyper install hyper-dracula
+
 echo "Installing: Insomnia - HTTP and GraphQL Client"
 brew install --cask insomnia
 
