@@ -55,6 +55,9 @@ brew install font-jetbrains-mono
 echo "Installing: Font Fira Code"
 brew install font-fira-code
 
+echo "Installing: Expo CLI"
+npm install -g expo-cli
+
 echo "Installing: Firebase CLI"
 npm install -g firebase-tools
 
