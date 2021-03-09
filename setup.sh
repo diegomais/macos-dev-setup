@@ -41,6 +41,15 @@ echo "Installing: Homebrew"
 echo "Installing: nvm"
 /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
 
+echo "Installing: Homebrew: cask-fonts"
+brew tap homebrew/cask-fonts
+
+echo "Installing: Font JetBrains Mono"
+brew install font-jetbrains-mono
+
+echo "Installing: Font Fira Code"
+brew install font-fira-code
+
 echo "Installing: Firebase CLI"
 npm install -g firebase-tools
 
