@@ -114,6 +114,9 @@ brew install --cask telegram
 echo "Installing: Microsoft Visual Studio Code - Open-source code editor"
 brew install --cask visual-studio-code
 
+echo 'installing: Microsoft Visual Studio Code extensions'
+code --install-extension shan.code-settings-sync
+
 echo "Installing: Zeplin - Share, organize and collaborate on designs"
 brew install --cask zeplin
 
