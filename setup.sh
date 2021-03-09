@@ -40,6 +40,7 @@ echo "Installing: Homebrew"
 
 echo "Installing: nvm"
 /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
+echo -e '#Calling nvm use automatically in a directory with a .nvmrc file\nautoload -U add-zsh-hook\nload-nvmrc() {\n  local node_version="$(nvm version)"\n  local nvmrc_path="$(nvm_find_nvmrc)"\n\n  if [ -n "$nvmrc_path" ]; then \n    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")\n\n    if [ "$nvmrc_node_version" = "N/A" ]; then\n      nvm install\n    elif [ "$nvmrc_node_version" != "$node_version" ]; then\n      nvm use\n    fi\n  elif [ "$node_version" != "$(nvm version default)" ]; then\n    echo "Reverting to nvm default version"\n    nvm use default\n  fi\n}\nadd-zsh-hook chpwd load-nvmrc\nload-nvmrc' >>~/.zshrc
 
 echo "Installing: Zinit - Plugins Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
