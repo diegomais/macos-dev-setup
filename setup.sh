@@ -41,6 +41,10 @@ echo "Installing: Homebrew"
 echo "Installing: nvm"
 /bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
 
+echo "Installing: Zinit - Plugins Zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
+echo -e "### Zinit Plugins\nzinit light zdharma/fast-syntax-highlighting\nzinit light zsh-users/zsh-autosuggestions\nzinit light zsh-users/zsh-completions" >>~/.zshrc
+
 echo "Installing: Homebrew: cask-fonts"
 brew tap homebrew/cask-fonts
 
