@@ -92,6 +92,10 @@ brew install --cask notion
 echo "Installing: Postman - Collaboration platform for API development"
 brew install --cask postman
 
+echo "Installing: Powerlevel10k - Theme for Zsh"
+brew install romkatv/powerlevel10k/powerlevel10k
+echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+
 echo "Installing: React Native Debugger - App for debugging React Native apps"
 brew install --cask react-native-debugger
 
