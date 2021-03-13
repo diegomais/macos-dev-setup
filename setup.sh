@@ -1,37 +1,3 @@
-echo "What name do you want to use in GIT user.name?"
-echo "For example, mine will be \"Diego Mais\""
-read git_config_user_name
-git config --global user.name "$git_config_user_name"
-clear
-
-echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"diegomais.dev@gmail.com\""
-read git_config_user_email
-git config --global user.email $git_config_user_email
-clear
-
-echo "Can I set Visual Studio Code as your default GIT editor for you? (y/n)"
-read git_core_editor_to_code
-if echo "$git_core_editor_to_code" | grep -iq "^y" ;then
-	git config --global core.editor code --wait
-else
-	echo "Okay, no problem. :) Let's move on!"
-fi
-
-echo "Generating a SSH Key"
-ssh-keygen -t rsa -b 4096 -C $git_config_user_email
-ssh-add -K ~/.ssh/id_rsa
-pbcopy < ~/.ssh/id_rsa.pub
-
-echo "Start the ssh-agent in the background"
-eval "$(ssh-agent -s)"
-
-echo "Automatically load SSH keys"
-echo "Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
-
 echo "Installing: oh-my-zsh"
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -54,6 +20,9 @@ brew install font-jetbrains-mono
 
 echo "Installing: Font Fira Code"
 brew install font-fira-code
+
+echo "Installing: Git - Distributed version control system"
+brew install git
 
 echo "Installing: Expo CLI"
 npm install -g expo-cli
@@ -148,3 +117,37 @@ brew install --cask android-studio
 
 echo "Installing: Spotify - Music streaming service"
 brew install --cask spotify
+
+echo "What name do you want to use in GIT user.name?"
+echo "For example, mine will be \"Diego Mais\""
+read git_config_user_name
+git config --global user.name "$git_config_user_name"
+clear
+
+echo "What email do you want to use in GIT user.email?"
+echo "For example, mine will be \"diegomais.dev@gmail.com\""
+read git_config_user_email
+git config --global user.email $git_config_user_email
+clear
+
+echo "Can I set Visual Studio Code as your default GIT editor for you? (y/n)"
+read git_core_editor_to_code
+if echo "$git_core_editor_to_code" | grep -iq "^y" ;then
+	git config --global core.editor code --wait
+else
+	echo "Okay, no problem. :) Let's move on!"
+fi
+
+echo "Generating a SSH Key"
+ssh-keygen -t rsa -b 4096 -C $git_config_user_email
+ssh-add -K ~/.ssh/id_rsa
+pbcopy < ~/.ssh/id_rsa.pub
+
+echo "Start the ssh-agent in the background"
+eval "$(ssh-agent -s)"
+
+echo "Automatically load SSH keys"
+echo "Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
