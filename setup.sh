@@ -1,122 +1,87 @@
-echo "Installing: oh-my-zsh"
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
 echo "Installing: Homebrew"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-echo "Installing: nvm"
-/bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
-echo -e '#Calling nvm use automatically in a directory with a .nvmrc file\nautoload -U add-zsh-hook\nload-nvmrc() {\n  local node_version="$(nvm version)"\n  local nvmrc_path="$(nvm_find_nvmrc)"\n\n  if [ -n "$nvmrc_path" ]; then \n    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")\n\n    if [ "$nvmrc_node_version" = "N/A" ]; then\n      nvm install\n    elif [ "$nvmrc_node_version" != "$node_version" ]; then\n      nvm use\n    fi\n  elif [ "$node_version" != "$(nvm version default)" ]; then\n    echo "Reverting to nvm default version"\n    nvm use default\n  fi\n}\nadd-zsh-hook chpwd load-nvmrc\nload-nvmrc' >>~/.zshrc
+echo "Installing: oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "Installing: Zinit - Plugins Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/zdharma/zinit/master/doc/install.sh)"
 echo -e "### Zinit Plugins\nzinit light zdharma/fast-syntax-highlighting\nzinit light zsh-users/zsh-autosuggestions\nzinit light zsh-users/zsh-completions" >>~/.zshrc
 
+echo "Installing: nvm"
+/bin/bash -c "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash)"
+
+echo "Setting nvm to automatically call nvm use in a directory with a .nvmrc file"
+echo -e '#Calling nvm use automatically in a directory with a .nvmrc file\nautoload -U add-zsh-hook\nload-nvmrc() {\n  local node_version="$(nvm version)"\n  local nvmrc_path="$(nvm_find_nvmrc)"\n\n  if [ -n "$nvmrc_path" ]; then \n    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")\n\n    if [ "$nvmrc_node_version" = "N/A" ]; then\n      nvm install\n    elif [ "$nvmrc_node_version" != "$node_version" ]; then\n      nvm use\n    fi\n  elif [ "$node_version" != "$(nvm version default)" ]; then\n    echo "Reverting to nvm default version"\n    nvm use default\n  fi\n}\nadd-zsh-hook chpwd load-nvmrc\nload-nvmrc' >>~/.zshrc
+
+echo "Installing: Yarn"
+brew install yarn
+
 echo "Installing: Homebrew: cask-fonts"
 brew tap homebrew/cask-fonts
 
-echo "Installing: Font JetBrains Mono"
+echo "Installing: Font JetBrains Mono - A free and open source typeface for developers"
 brew install font-jetbrains-mono
 
-echo "Installing: Font Fira Code"
+echo "Installing: Font Fira Code - A free monospaced font with programming ligatures"
 brew install font-fira-code
 
 echo "Installing: Git - Distributed version control system"
 brew install git
 
-echo "Installing: Expo CLI"
-npm install -g expo-cli
+echo "Installing: Git Flow - Git extensions to provide high-level repository operations for Vincent Driessen's branching model"
+brew install git-flow
 
-echo "Installing: Firebase CLI"
-npm install -g firebase-tools
-
-echo "Installing: Nest CLI - Node.js Framework"
-npm install -g @nestjs/cli
-
-echo "Installing: Elixir"
-brew install elixir
-
-echo "Installing: Phoenix"
-mix archive.install hex phx_new 1.5.7
-
-echo "Installing: DBeaver Community Edition"
+echo "Installing: DBeaver Community Edition - Universal database tool and SQL client"
 brew install --cask dbeaver-community
 
-echo "Installing: DevDocs App"
+echo "Installing: DevDocs App - DevDocs.io combines multiple API documentations in a fast, organized, and searchable interface"
 brew install --cask devdocs
 
-echo "Installing: Discord"
+echo "Installing: Discord - Voice and text chat software"
 brew install --cask discord
 
-echo "Installing: Figma"
-brew install --cask figma
-
-echo "Installing: Facebook Flipper - Desktop debugging platform for mobile developers"
-brew install --cask flipper
+echo "Installing: Docker - Pack, ship and run any application as a lightweight container"
+brew install --cask docker
 
 echo "Installing: Google Chrome - Web browser"
 brew install --cask google-chrome
 
-echo "Installing: Hyper - Terminal built on web technologies"
-brew install --cask hyper
-
-echo "Installing: Hyper-Dracula - Dark theme for Hyper"
-hyper install hyper-dracula
-
-echo "Installing: Insomnia - HTTP and GraphQL Client"
-brew install --cask insomnia
-
-echo "Installing: Microsoft Edge - Web browser"
-brew install --cask microsoft-edge
-
 echo "Installing: MongoDB Compass - GUI for MongoDB"
 brew install --cask mongodb-compass
 
-echo "Installing: Notion - App to write, plan, collaborate, and get organized"
+echo "Installing: Mozilla Firefox - Web browser"
+brew install --cask firefox
+
+echo "Installing: Notion - Write, plan, collaborate, and get organized"
 brew install --cask notion
 
-echo "Installing: Postman - Collaboration platform for API development"
+echo "Installing: Postman - API Testing and Documentation"
 brew install --cask postman
 
-echo "Installing: Powerlevel10k - Theme for Zsh"
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+echo "Installing: Slack - Chat and Team Communication"
+brew install --cask slack
 
-echo "Installing: React Native Debugger - App for debugging React Native apps"
-brew install --cask react-native-debugger
+echo "Installing: Amazon Music - Music Streaming Service"
+brew install --cask amazon-music
 
-echo "Installing: Reactotron - App for inspecting React JS and React Native projects"
-brew install --cask reactotron
+echo "Installing: Deezer - Music Streaming Service"
+brew install --cask deezer
 
-echo "Installing: Skype - App for video chat, voice call and instant messaging"
-brew install --cask skype
+echo "Installing: Spotify - Music Streaming Service"
+brew install --cask spotify
 
 echo "Installing: SourceTree - Graphical client for Git version control"
 brew install --cask sourcetree
 
-echo "Installing: Telegram - Messaging app with a focus on speed and security"
-brew install --cask telegram
-
 echo "Installing: Microsoft Visual Studio Code - Open-source code editor"
 brew install --cask visual-studio-code
-
-echo 'installing: Microsoft Visual Studio Code extensions'
-code --install-extension shan.code-settings-sync
 
 echo "Installing: Zeplin - Share, organize and collaborate on designs"
 brew install --cask zeplin
 
 echo "Installing: Zoom.us - Video communication and virtual meeting platform"
 brew install --cask zoom
-
-echo "Installing: Docker"
-brew install --cask docker
-
-echo "Installing: Android Studio"
-brew install --cask android-studio
-
-echo "Installing: Spotify - Music streaming service"
-brew install --cask spotify
 
 echo "What name do you want to use in GIT user.name?"
 echo "For example, mine will be \"Diego Mais\""
@@ -139,9 +104,9 @@ else
 fi
 
 echo "Generating a SSH Key"
-ssh-keygen -t rsa -b 4096 -C $git_config_user_email
-ssh-add -K ~/.ssh/id_rsa
-pbcopy < ~/.ssh/id_rsa.pub
+ssh-keygen -t ed25519 -C $git_config_user_email
+ssh-add -K ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
 
 echo "Start the ssh-agent in the background"
 eval "$(ssh-agent -s)"
@@ -150,4 +115,4 @@ echo "Automatically load SSH keys"
 echo "Host *
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/id_rsa" > ~/.ssh/config
+  IdentityFile ~/.ssh/id_ed25519" > ~/.ssh/config
