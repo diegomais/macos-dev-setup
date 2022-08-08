@@ -99,6 +99,9 @@ echo "Please change your theme in your .zshrc file by replacing ZSH_THEME to spa
 echo "Please add the following lines to your .zshrc file:"
 echo "SPACESHIP_PROMPT_ORDER=(\n\n  user          \# Username section\n  dir           \# Current directory section\n  host          \# Hostname section\n  git           \# Git section (git_branch + git_status)\n  node           \# Node.js section\n  exec_time     \# Execution time\n  vi_mode       \# Vi-mode indicator\n  jobs          \# Background jobs indicator\n  exit_code     \# Exit code section\n  char          \# Prompt character\n)\nSPACESHIP_USER_SHOW=always\nSPACESHIP_PROMPT_ADD_NEWLINE=false\nSPACESHIP_CHAR_SYMBOL="❯"\nSPACESHIP_CHAR_SUFFIX=" "
 
+echo "Auto setup remote upstream on default push when no upstream tracking exists for the current branch:"
+git config --global push.autoSetupRemote true
+
 echo "What name do you want to use in GIT user.name?"
 echo "For example, mine will be \"Diego Mais\""
 read git_config_user_name
